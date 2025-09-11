@@ -1,12 +1,21 @@
 -- init_db.sql
 
-INSERT INTO user (type, name, email, Password)
+INSERT INTO user (type, name, email, hashed_password)
 VALUES 
-('association', 'Les Restos du Code', 'contact@restoscode.org', 'hash123'),
-('association', 'Sauver la Data', 'hello@sauverdata.org', 'hash456'),
-('benevole', 'Nina Dev', 'nina@example.com', 'hash789'),
-('benevole', 'Jean Dupont', 'jean.dupont@example.com', 'hash000'),
-('benevole', 'Marie Curieuse', 'marie.curieuse@example.com', 'hash111');
+-- password: restos123
+('association', 'Les Restos du Code', 'contact@restoscode.org', '$2b$12$V6fo9OSCe/SN5S7NEbvKwu2edtNELzvzcfsfT3tz1pGW/XF2GLQqO'),
+
+-- password: sauver456
+('association', 'Sauver la Data', 'hello@sauverdata.org', '$2b$12$wcI1kCnOz/WVJB5QRQmf/O.mzBj5pzd4/yH/tMxJGMUkGRUrxQCdy'),
+
+-- password: nina789
+('benevole', 'Nina Dev', 'nina@example.com', '$2b$12$sipuk.0UGx0CnuoUUculI.ghHZRwqj.46wRXlxEvNSQApez54AAPK'),
+
+-- password: jean000
+('benevole', 'Jean Dupont', 'jean.dupont@example.com', '$2b$12$kphcqFstX7rVyM596DSD1eM5dtNkaVIfLJfNo1l9j78bk0m6e7MQK'),
+
+-- password: marie111
+('benevole', 'Marie Curieuse', 'marie.curieuse@example.com', '$2b$12$pD9LHEi3Q7LC7e39xy0Af.t6c0gwADzKdZdQDFveAEceHwe59rgvC');
 
 
 INSERT INTO missions (title, descrip_Mission, date_mission, id_user)

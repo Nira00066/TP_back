@@ -8,7 +8,7 @@ CREATE TABLE
         type enum ('benevole', 'association') NOT NULL,
         name VARCHAR(100) NOT NULL,
         email VARCHAR(100) NOT NULL UNIQUE,
-        Password VARCHAR(255) NOT NULL
+        hashed_password VARCHAR(255) NOT NULL
     );
 
 CREATE TABLE
