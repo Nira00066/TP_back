@@ -1,0 +1,17 @@
+{
+  "name": "tp-ccp2",
+  "version": "1.0.0",
+  "description": "TP CCP2",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "bcrypt": "^6.0.0"
+  },
+   "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
