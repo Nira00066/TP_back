@@ -13,7 +13,6 @@ VALUES
 
 -- password: jean000
 ('benevole', 'Jean Dupont', 'jean.dupont@example.com', '$2b$12$kphcqFstX7rVyM596DSD1eM5dtNkaVIfLJfNo1l9j78bk0m6e7MQK'),
-
 -- password: marie111
 ('benevole', 'Marie Curieuse', 'marie.curieuse@example.com', '$2b$12$pD9LHEi3Q7LC7e39xy0Af.t6c0gwADzKdZdQDFveAEceHwe59rgvC');
 
