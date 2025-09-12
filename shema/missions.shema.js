@@ -1,16 +1,12 @@
-// C'est avec joi 
+const Joi = require('joi');
 
-/*const Joi = require("joi");
-
-//TODO: completer ici le schema
-const giftSchema = Joi.object({
-  title: Joi.string().min(4).required(),
-  description: Joi.string().allow("").optional(),
-  price: Joi.number().min(1).required(),
-  reserved: Joi.boolean().optional().default(false),
+const userSchema = Joi.object({
+    id: Joi.number().integer().positive(),
+    type: Joi.string().valid('benevole', 'association').required(),
+    name: Joi.string().max(100).required(),
+    email: Joi.string().email().max(100).required(),
+    hashed_password: Joi.string().max(255).required()
 });
 
-module.exports = giftSchema;
-Dans ce style
 
-*/ 
+module.exports = userSchema;

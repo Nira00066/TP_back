@@ -2,6 +2,7 @@ const express = require("express");
 const db = require("./db/connectDB");
 const missionsRoute = require("./router/mission");
 const authLogge = require("./router/user");
+const candidatureRouter = require("./router/candidature")
 const app = express();
 app.use(express.json());
 
@@ -14,6 +15,8 @@ app.use("/", missionsRoute);
 
 app.use("/connexion", authLogge);
 // http://localhost:3000/connexion/
+
+app.use('/',candidatureRouter);
 
 
 app.listen(3000, () => db(), console.log(" Server lancer"));

@@ -10,5 +10,6 @@ router.post(
 );
 
 router.post("candidature/:id", authTokenAsso,candidature.postAnswerCandidature);
+router.get("/candidatures",authTokenAsso,candidature.getcandidature)
 
 module.exports = router;
