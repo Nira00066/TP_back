@@ -35,16 +35,16 @@ CREATE TABLE
 */
 
 
-ALTER TABLE candidature
-MODIFY id_mission INT NULL;
+-- ALTER TABLE candidature
+-- MODIFY id_mission INT NULL;
 
 
-ALTER TABLE candidature
-DROP FOREIGN KEY candidature_ibfk_2;
+-- ALTER TABLE candidature
+-- DROP FOREIGN KEY candidature_ibfk_2;
 
 
-ALTER TABLE candidature
-ADD CONSTRAINT candidature_ibfk_2
-FOREIGN KEY (id_mission) REFERENCES missions(id)
-ON DELETE SET NULL;
+-- ALTER TABLE candidature
+-- ADD CONSTRAINT candidature_ibfk_2
+-- FOREIGN KEY (id_mission) REFERENCES missions(id)
+-- ON DELETE SET NULL;
 
