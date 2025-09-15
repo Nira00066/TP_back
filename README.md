@@ -52,9 +52,8 @@ L’objectif est de **modéliser correctement la base de données**, d’assurer
 - **Contraintes de type et valeurs possibles** :
 
   - `user.type` : uniquement `benevole` ou `association`
-  - `candidature.status` : uniquement `en attente`, `acceptee` ou `refusee` (par défaut `en attente`)
+  - `candidature.status` : uniquement `en attente`, `acceptee` ou `refusee`
 
-- **Intégrité référentielle** : La suppression ou la modification des utilisateurs ou missions doit respecter les relations pour éviter les données orphelines
 
 ## Comment exécuter le projet
 
