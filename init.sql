@@ -24,7 +24,7 @@ CREATE TABLE
     candidature (
         id INT PRIMARY KEY AUTO_INCREMENT,
         date_candidature DATE NOT NULL,
-        status enum ('en attente', 'acceptee', 'refusee') DEFAULT 'en attente',
+        status enum ('en attente', 'acceptee', 'refusee'),
         id_user INT,
         id_mission INT NULL,
         FOREIGN KEY (id_user) REFERENCES user (id),

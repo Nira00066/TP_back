@@ -34,4 +34,6 @@ function authTokenBenevole(req, res, next) {
   });
 }
 
+// middlware est un bouc de code qui intersepter une requet http (verif ,err)
+
 module.exports = { authTokenAsso, authTokenBenevole };

@@ -9,12 +9,15 @@ exports.logger = async (req, res) => {
   if (!email || !password) {
     return res.status(400).json({ message: "email et password requis" });
     // on verrifie qu'il y a les deux
-    
   }
   console.log("1");
 
+  // requete preparer SELECT * FROM user WHERE email = ?" sert a eviter les injection sql fail sql
+
   try {
-    const [rows] = await db.execute("SELECT * FROM user WHERE email = ?", [email]);
+    const [rows] = await db.execute("SELECT * FROM user WHERE email = ?", [
+      email,
+    ]);
     if (rows.length === 0) {
       return res.status(400).json({ message: "utilisateur non trouvé" });
     }
@@ -49,6 +52,8 @@ exports.logger = async (req, res) => {
       process.env.JWT_SECRET,
       { expiresIn: "1h" }
     );
+
+    // token securit
     console.log("1");
 
     res.json({ token });
